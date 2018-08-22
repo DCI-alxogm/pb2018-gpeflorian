@@ -6,8 +6,7 @@
 	int main ()
 
 {
-
-	double x,y,z,r,c,a,grados;
+	double x,y,z,r,c,a,gradosc,gradosa,x2,y2,z2;
 	printf("Introduzca a continuacion los 3 valores de sus coordenadas cartesians\n");
 	scanf("%lf %lf %lf", &x,&y,&z);
 
@@ -16,14 +15,23 @@
 	printf("El valor del radio es %lf \n", r);
 
 	c=acos(z/r);
-	grados=c*57.29557795131;
-	printf("El valor de la colatitud es %lf \n", grados);
+	gradosc=c*57.29557795131;
+	printf("El valor de la colatitud es %lf \n", gradosc);
 	
 	a=atan(y/x);
-	grados=a*57.29557795131;
-	printf("El valor del azimut es %lf \n", grados); 
-	return 0;
+	gradosa=a*57.29557795131;
+	printf("El valor del azimut es %lf \n", gradosa); 
+	
+	x2=r*sin(gradosc)*cos(gradosa);
+	printf("Su coordenada cartesiana x es %lf \n", x2);
 
+	y2=r*sin(gradosc)*sin(gradosa);
+	printf("Su coordenada cartesiana y es %lf \n", y2);
+
+	z2=r*cos(gradosc);
+	printf("Su coordenada cartesiana z es %lf \n", z2);
+	
+	return 0;
 }
 	
 

@@ -16,6 +16,9 @@
 
 	c=(f-32)/1.8;
 	printf("Finalmente aqui se muestran los grados Centigrados del inicio %f \n", c);
+	
+
+
 	return 0;
 
 	
