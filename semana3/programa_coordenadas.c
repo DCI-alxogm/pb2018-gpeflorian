@@ -22,13 +22,13 @@
 	gradosa=a*57.29557795131;
 	printf("El valor del azimut es %lf \n", gradosa); 
 	
-	x2=r*sin(gradosc)*cos(gradosa);
+	x2=r*(sin(gradosc)*57.29557795131)*(cos(gradosa)*57.29557795131);
 	printf("Su coordenada cartesiana x es %lf \n", x2);
 
-	y2=r*sin(gradosc)*sin(gradosa);
+	y2=r*(sin(gradosc)*57.29557795131)*(sin(gradosa)*57.29557795131);
 	printf("Su coordenada cartesiana y es %lf \n", y2);
 
-	z2=r*cos(gradosc);
+	z2=r*(cos(gradosc)*57.29557795131);
 	printf("Su coordenada cartesiana z es %lf \n", z2);
 	
 	return 0;
