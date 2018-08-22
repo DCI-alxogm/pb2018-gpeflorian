@@ -6,12 +6,27 @@
 
 	{
 	
-	int option;
+	int opcion;
 
-	printf("Teclea una opción \n")
-	printf("(1) para convertir tempertaturas"); 
-	printf("(2) para convertir coordenadas");
+	printf("Teclea una opcion \n");
+	printf("(1) para convertir tempertaturas \n"); 
+	printf("(2) para convertir coordenadas\n");
 
-	scabf("i%", &opcion);
+	scanf("%i", &opcion);
 
-	switch
+	switch(opcion)
+	{
+	case 1: 
+		printf("Entre la opcion 1");
+		break;
+	case 2:
+		printf("Entre la opcion 2");
+		break;
+	default:
+		printf("Opcion invalida");
+		break;
+	}
+	return 0;
+	}
+	
+
