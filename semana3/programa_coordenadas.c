@@ -6,30 +6,31 @@
 	int main ()
 
 {
-	double x,y,z,r,c,a,gradosc,gradosa,x2,y2,z2;
-	printf("Introduzca a continuacion los 3 valores de sus coordenadas cartesians\n");
+	double x,y,z,r,c,a,x2,y2,z2;
+	printf("Introduzca los valores de sus coordenadas x y z\n");
 	scanf("%lf %lf %lf", &x,&y,&z);
 
+	printf("Valor de coordenadas esfericas: \n");
 
 	r=sqrt(pow(x,2)+pow(y,2)+pow(z,2));
-	printf("El valor del radio es %lf \n", r);
+	printf("Radio= %lf \n", r);
 
-	c=acos(z/r);
-	gradosc=c*57.29557795131;
-	printf("El valor de la colatitud es %lf \n", gradosc);
+	a=atan(y/x)*57.29557795131;
+	printf("Coaltitud= %lf \n", a);
 	
-	a=atan(y/x);
-	gradosa=a*57.29557795131;
-	printf("El valor del azimut es %lf \n", gradosa); 
+	c=acos(z/r)*57.29557795131;
+	printf("Azimut= %lf \n", c); 
 	
-	x2=r*(sin(gradosc)*57.29557795131)*(cos(gradosa)*57.29557795131);
-	printf("Su coordenada cartesiana x es %lf \n", x2);
+	printf("Valor de las coordenadas cartecianas: \n");
 
-	y2=r*(sin(gradosc)*57.29557795131)*(sin(gradosa)*57.29557795131);
-	printf("Su coordenada cartesiana y es %lf \n", y2);
+	x2=r*sin(c)*cos(a);
+	printf("x= %lf \n", x2);
 
-	z2=r*(cos(gradosc)*57.29557795131);
-	printf("Su coordenada cartesiana z es %lf \n", z2);
+	y2=r*sin(c)*sin(a);
+	printf("y= %lf \n", y2);
+
+	z2=r*cos(c);
+	printf("z= %lf \n", z2);
 	
 	return 0;
 }
