@@ -9,7 +9,7 @@
 	
 	int opcion;
 	float temperatura, k, f, c;
-	double x,y,z,r,l,a,x2,y2,z2;
+	double x,y,z,aux,r,l,a,X,Y,Z;
 
 	
 	printf("Teclea una opcion \n");
@@ -44,10 +44,11 @@
 		r=sqrt(pow(x,2)+pow(y,2)+pow(z,2));
 		printf("Radio= %lf \n", r);
 
-		a=atan(y/x)*57.29557795131;
+		a=(atan(y/x))*57.29557795131;
 		printf("Coaltitud= %lf \n", a);
-	
-		l=acos(z/r)*57.29557795131;
+		
+		aux=(sqrt(pow(x,2)+pow(y,2)))/z;
+		l=atan(aux)*57.29557795131;
 		printf("Azimut= %lf \n", l); 
 		
 		if (x==0 && y==0)
@@ -68,14 +69,14 @@
 	
 		printf("Valor de las coordenadas cartecianas: \n");
 
-		x2=r*sin(l)*cos(a);
-		printf("x= %lf \n", x2);
+		X=r*sin(l/57.29557795131)*cos(a/57.29557795131);
+		printf("x= %lf \n", X);
 	
-		y2=r*sin(l)*sin(a);
-		printf("y= %lf \n", y2);
+		Y=r*sin(l/57.29557795131)*sin(a/57.29557795131);
+		printf("y= %lf \n", Y);
 
-		z2=r*cos(l);
-		printf("z= %lf \n", z2);
+		Z=r*cos(l/57.29557795131);
+		printf("z= %lf \n", Z);
 		break;
 	default:
 		printf("Opcion invalida\n");
