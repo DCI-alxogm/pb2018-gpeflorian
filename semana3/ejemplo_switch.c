@@ -23,7 +23,7 @@
 	/*Switch permite usar el valor de una variable entera para elegir secuencia de acciones de acuerdo al caso que corresponda*/
 	switch(opcion)
 	{
-	/*Cada liea de case te da una opcion con el que el programa hara una accion, dependendo de la informacion que entre el usuario*/
+	/*Cada linea de case te da una opcion con el que el programa hara una accion, dependendo de la informacion que entre el usuario*/
 	case 1: 
 		printf("Entre la opcion 1");
 		break;
