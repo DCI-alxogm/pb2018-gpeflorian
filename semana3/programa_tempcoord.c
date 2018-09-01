@@ -1,6 +1,6 @@
 /*Este programa convierte temperaturas y coordendas*/
 
-/*Se indica la libreria que suamos*/
+/*Se indica la libreria que usamos*/
 #include <stdio.h>
 #include<math.h>
 
