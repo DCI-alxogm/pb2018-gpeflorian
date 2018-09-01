@@ -7,8 +7,8 @@
 	/*Funcion maestra del programa*/
 	int main ()
 
-{	/*Declaramos varialbes de tipo real con punto flotante*/
-	double x,y,z,r,c,a,x2,y2,z2;
+{	/*Declaramos variables de tipo real con punto flotante*/
+	double x,y,z,aux,r,l,a,X,Y,Z;
 	printf("Introduzca los valores de sus coordenadas x y z\n");
 	/*Le damos al usiario la opcion de entrar variables al sistema*/
 	scanf("%lf %lf %lf", &x,&y,&z);
@@ -24,25 +24,30 @@
 	a=atan(y/x)*57.29557795131;
 	printf("Coaltitud= %lf \n", a);
 	
-	/*Sacamos arco coseno de z entre radio, y lo multiplicamos por 57.3 para calcular valor de c*/
-	c=acos(z/r)*57.29557795131;
-	printf("Azimut= %lf \n", c); 
+	/*Calculamos el vaor de aux elevando al cuadrado x,y, luego sacamos raiz y finalmente dividimos entre z */
+		aux=(sqrt(pow(x,2)+pow(y,2)))/z;
+		/*Calculamos l sacando la inversa de tangente de aux y multiplicando por 57.3*/
+		l=atan(aux)*57.29557795131;
+		a=(atan(y/x))*57.29557795131;
+		/*Indicamos valor de l*/
+		printf("Azimut= %lf \n", l); 
 	
 	/*Indicamos el valor de coordenadas polares a cartecianas de nuevo*/
 	printf("Valor de las coordenadas cartecianas: \n");
 
-	/*Multiplicamos radio por seno de c y coseno de a para calcular valor de x original*/
-	x2=r*sin(c)*cos(a);
-	printf("x= %lf \n", x2);
+	/*Multiplicamos radio por seno de c entre 57.3 y coseno de a entre 57.3 para calcular valor de x original*/
+		X=r*sin(l/57.29557795131)*cos(a/57.29557795131);
+		printf("x= %lf \n", X);
 	
-	/*Multiplicamos radio por seno de c y seno de a para calcular el valor de y original*/
-	y2=r*sin(c)*sin(a);
-	printf("y= %lf \n", y2);
+		/*Multiplicamos radio por seno de c entre 57.3 y seno de a entre 57.3 para calcular el valor de y original*/
+		Y=r*sin(l/57.29557795131)*sin(a/57.29557795131);
+		printf("y= %lf \n", Y);
 
-	/*Multiplicamos radio por coseno de c para calcular el valor de z original*/
-	z2=r*cos(c);
-	printf("z= %lf \n", z2);
-	
+		/*Multiplicamos radio por coseno de c entre 57.3 para calcular el valor de z original*/
+		Z=r*cos(l/57.29557795131);
+		printf("z= %lf \n", Z);
+
+/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara signo de error*/
 	return 0;
 }
 	
