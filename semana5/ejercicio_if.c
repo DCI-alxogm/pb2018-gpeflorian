@@ -7,29 +7,30 @@
 /*Funcion maestra del programa*/
 int main()
 {
-	/*Me define una varaible de tipo punto flotante res*/
-	float x,res1,res2,res3,res4,res5;
-	/*Me define una variable de tipo n igual a 3, una k y una j*/
+	/*Me define una varaible de tipo punto flotante res y x*/
+	double x,res;
+	/*Me define una variable de tipo entera n y e que son el intervalo y expaciado*/
 	int n,e;
 
-		printf("Ingrese aqui un numero x para obtener su exponencial, logaritno, seno, coseno y raíz cuadrada. Así como un intervalo y un expaciado para los resultados.");
-		scanf("%f %i %i", &x,&n,&e);
+		/*Me indica las instrucciones para el usuario y lo que el programa hara con los valoresi ingresados*/
+		printf("Ingrese aqui un numero x para obtener su exponencial, logaritmo, seno, coseno y raíz cuadrada. Así como un intervalo y un expaciado para los resultados. \n");
+		scanf("%lf %i %i", &x,&n,&e);
 		
-			/*Me indica que j empieza en 0 y mientras sea menor a 3 se le sumara 1*/
-			for(x=0;x<n;x+e){
-				/*Me indica que obtenemos res al multiplicar j por k por 1.0*/			
-				res1=exp(x);
-				res2=log(x);
-				res3=sin(x)*57.29557795131;
-				res4=cos(x)*57.29557795131;
-				res5=sqrt(x);
-				/*imprimirmos a la pantalla j, k y res*/
-				printf("El exponensial es %f %f \n",x,res1);
-				printf("El logaritmo es %f %f \n",x,res2);
-				printf("El seno es %f %f \n",x,res3);
-				printf("El coseno es %f %f \n",x,res4);
-				printf("La raiz cuadrada es %f %f \n",x,res5);
+			/*Me indica que x empieza en 0 y mientras sea menor a n se le sumara e*/
+			for(x=0;x<n;x+=e){
+				/*Realizara las operaciones corresopndientes a el valor x agregado por el usuario*/			
+				res=exp(x);
+				printf("El exponencial es %lf %lf \n",x,res);
+				res=log(x);
+				printf("El logaritmo es %lf %lf \n",x,res);
+				res=sin(x)*57.29557795131;
+				printf("El seno es %lf %lf \n",x,res);
+				res=cos(x)*57.29557795131;
+				printf("El coseno es %lf %lf \n",x,res);
+				res=sqrt(x);
+				printf("La raiz cuadrada es %lf %lf \n",x,res);
+				
 			}
-		}
 	/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara signo de error*/
 	return 0;
+}
