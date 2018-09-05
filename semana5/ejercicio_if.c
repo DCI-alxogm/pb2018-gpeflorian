@@ -8,29 +8,39 @@
 int main()
 {
 	/*Me define una varaible de tipo punto flotante res y x*/
-	double x,res;
+	float xi,xf,espaciado,res;
 	/*Me define una variable de tipo entera n y e que son el intervalo y expaciado*/
-	int n,e;
+	int i,n;
 
-		/*Me indica las instrucciones para el usuario y lo que el programa hara con los valoresi ingresados*/
-		printf("Ingrese aqui un numero x para obtener su exponencial, logaritmo, seno, coseno y raíz cuadrada. Así como un intervalo y un expaciado para los resultados. \n");
-		scanf("%lf %i %i", &x,&n,&e);
-		
-			/*Me indica que x empieza en 0 y mientras sea menor a n se le sumara e*/
-			for(x=0;x<n;x+=e){
-				/*Realizara las operaciones corresopndientes a el valor x agregado por el usuario*/			
-				res=exp(x);
-				printf("El exponencial es %lf %lf \n",x,res);
-				res=log(x);
-				printf("El logaritmo es %lf %lf \n",x,res);
-				res=sin(x)*57.29557795131;
-				printf("El seno es %lf %lf \n",x,res);
-				res=cos(x)*57.29557795131;
-				printf("El coseno es %lf %lf \n",x,res);
-				res=sqrt(x);
-				printf("La raiz cuadrada es %lf %lf \n",x,res);
-				
+		/*Indica al usuario que entre dos valores para calcular x asi como su intervalo*/
+		printf("Ingrese dos valores para el intervalo en el que el valor de x se calculara, asi como el espaciado que habra entre cada calculo de intervalo  \n");
+		/*Permite al usuario entrar los valores*/
+		scanf(" %f %f %f",&xi,&xf,&espaciado);
+
+		/*Indica que si xf es menor a xi entonces el calculo no se puede realizar y pide al usuario ingresar otros valores*/		
+		if(xf<xi){
+		printf("El valor de xf no puede ser menor que xi, favor de re-iniciar el programa e ingresar otros valores \n");
 			}
+			 
+
+		n=(xf-xi)/espaciado;
+		
+			/*Me indica que las operaciones inician en cero, deben ser menor que n y se le sumara 1*/
+			for(i=0;i<n;i++){
+				/*Realizara las operaciones corresopndientes a el valor x agregado por el usuario*/			
+				res=exp(xi);
+				printf("El exponencial de %f es %f \n",xi,res);
+				res=log(xi);
+				printf("El logaritmo de %f es %f \n",xi,res);
+				res=sin(xi)*57.29557795131;
+				printf("El seno es de %f es %f \n",xi,res);
+				res=cos(xi)*57.29557795131;
+				printf("El coseno de %f es %f \n",xi,res);
+				res=sqrt(xi);
+				printf("La raiz cuadrada de %f es %f \n",xi,res);
+				xi=xi+espaciado;	
+		}		
+			
 	/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara signo de error*/
 	return 0;
 }
