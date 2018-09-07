@@ -7,27 +7,32 @@
 int main()
 {
 
-	int p1,p2,res,i
+	int p1,p2,res,i,j;
 		
-		printf("Este programa calculara los numeros primos en un intervalo definido. Favor de introducir el intevalo dentro del que desea saber cuantos numeros primos hay. Aviso: el programa no calcuara mas de 100 numeros primos.")
+		printf("Este programa calculara los numeros primos en un intervalo definido. Favor de introducir el intevalo dentro del que desea saber cuantos numeros primos hay. Aviso: el programa no calcuara mas de 100 numeros primos.\n");
 
-		scanf("%i %i",&p1,&p2)
+		scanf("%i %i",&p1,&p2);
 
-		if(xf<xi){
-			printf("El programa no calculara mas de 100 numeros primos. Favor de re-iniciar el programa e ingresar su intervalo de nuevo \n");
-			}
 
-		
-			for (i=0;i<100;i+);
+		printf("La list de numeros primos son: %d and %d son \n",p1,p2);
+			
+			for (i=p1+1;i<p2;++i)
+				{
+			
 				
-				printf("%i")
-		
+				for(j=2;j<=i/2;++j){
+			
+					if(i %j==0)
+					{
+						res=1;
+						break;
+					}
+						    }
+					if(res==0)
+					printf("%d",i);
+}
 
-
-
-
-
-
+	return 0;
 
 
 }
