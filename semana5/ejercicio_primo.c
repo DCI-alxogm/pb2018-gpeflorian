@@ -11,61 +11,75 @@ int main(){
 
 
 	/*Declaramos variables de tipo entero*/
-	int num_final, num_inicial, resultado, i, j, primo, op=1, contador; 
+	int i,j,p1,p2,primo,res,option=1,count; 
 	
 		/*Permite realizar un loop mientras la opcion sea la primer escogida por el usuario*/
-		while(op==1){ 
+		while(option==1){ 
 
 
 		/*Inicio mi contador en 0 para que se aumente una unidad por vez que se ejecute mi programa*/
-		contador=0; 
+		count=0; 
 		
 
 			/*Le pide al usuario ingresar rango inicial y final*/
 			printf("Introducir el numero con el que desee iniciar y terminar el rango \n"); 
 			/*Permito al usuario ingresar un numero inicial y final*/
-			scanf("%i %i",&num_final,&num_inicial);
+			scanf("%i %i",&p2,&p1);
 
 
 				/*Indica que el rango solo puede contener 100  numeros*/
-				while((num_final-num_inicial)>100){ 
-				printf("\n Tu intervalo es demasiado grande, escribe otro más chico:\n"); 
-			printf("\n Dime un número con el que quieras iniciar: \n");
-				scanf("%i", &num_inicial);
-
-				printf("Dime un número con el que quieras terminar: \n");
-				scanf("%i", &num_final);
+				while((p2-p1)>100){ 
+				
+				/*Imprime a la pantalla un aviso para el usuario que el intervalo puede incluir solo un máximo de 100 digitos*/
+				printf("Favor de colocar un intervalo menor a 100"); 
+					
+			printf("Escribe el intervalo de dos numeros dentro del cual deseas saber los numeros primos que existen \n");
+				scanf("%i %i",&p1,p2);
+					
 				}
 
-			for(i=num_inicial; i<=num_final; i++){ //Este FOR sirve para que i vaya agarrando el valor de todos los números que se encuentran entre el intervalo dado por el usuario.
-				resultado=sqrt(i); //El resultado es la raíz de cada valor que toma i
-				primo=1; //Primo vale 1
+			/*El primer i me indica onde inicia el intervalo, el segundo i me indica donde termina y el i++ me indica que se añade una unidad a la cual se ejecutaran las condiciones dadas para le calculo del resultado*/
+			for(i=p1; i<=p2; i++){ 
+				
+				/*res es igual a la raiz cuadrada del valo de i*/
+				res=sqrt(i); 
+				
+				/*El valor inicial del numero primo es igual a uno*/
+				primo=1; 
 
-				for(j=2; j<=resultado; j++){ //Si queremos determinar los números primos se tiene que dividir el resultado de la raíz del número y dividirla entre todos los números del 2 al resultado que salió
+				/*Para determinar si un numero es primo, hay que dividir el resultado de la raíz del número. Luego dividirla entre todos los numeros empezando por el 2*/
+				for(j=2; j<=res; j++){ 
 
-					if((i%j)==0){ //Si sale 0, entonces no es primo
+					/*Nos indica la condicion que si el resultado es igual a cero entonces el numero no es primo*/
+					if((i%j)==0){ 
+					
+					/*Nos ayuda a determinar un valor de primo inicial en cero*/
 					primo=0;
 					}
 					}
 
-						if(primo==1){ //Si sale que el residuo es 1, entonces es un número primo y se imprime
+						/*Indica la condicion de que si el residuo de la divicion es un, entonces es numero primo*/
+						if(primo==1){ 
+						/*Imprime a la pantalla los numeros primos dentro del rango dado por el usuario*/
 						printf(" %i",i);
-						contador=contador+1; //El contador indica cuántos números primos has impreso	
+						/*No ayuda a ver la cantidad de numeros primos impresos*/
+						count=count+1; 
 		
-			
-							if(contador%20==0 ){
-							printf("\n"); //ESta condición indica que cuando el contador llegue a 20, entonces hay un salto de línea
+							/*Esta condicion if le indica al programa que al llevar al veinteavo termino se saltará a la siguiente línea*/
+							if(count%20==0 ){
+							printf("\n"); 
 									}
 
 					}	
 					}
 
-		
-				printf("\n Introduce 1 si quieres volver a realizar el programa, 2 si quieres salir: \n"); //Da la opción al usuario de volver a correr el programa
+				/*Pregunta al usuario si desea ejecutar de nuevo el programa o si desea salir de el */
+				printf("\n Introduce 1 si quieres volver a realizar el programa, 2 si quieres salir: \n"); 
+				/*Usuario puede ingresar la opcion que desee*/
 				scanf("%i", &op);
 				}
-
-	return 0; //Cierra el programa
+	/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara signo de error*/
+	return 0;
 }
  
 	
