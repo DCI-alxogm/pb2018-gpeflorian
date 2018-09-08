@@ -10,6 +10,10 @@ Ejemplo tempo_c: Aqui uso mi libreria stdio.h, asi como la funcion maestra int m
 
 Ejercicio_if: comienzo declarando las librerias que usare las cuales son math.h y stdio.h. Luego delcaro mi funcion maestra con int main (). Despues declaro mis variables enteras y flotantes con int y float. Procedo a pedirle al usuario que ingrese los valoers del intervalo con el que quiere trabajar con printf y para que increse los valores uso scanf y las variables ya declaradas. Luego indicoq que si la variable final es menor a la inicial no se realizaran las instruciones if(xf<xi). Indico el valor de el maximo del rango con n=(xf-xi)/espaciado;. Lueo indico el rango de mis operaciones y que incrementen con uno for(i=0;i<n;i++){. Finalmente indico operaciones que realizar con la variable x que seria exponente exp, logaritmo log, seno sin, coseno cos, raiz cuadrada con squrt.
 
+Ejercicio_primos.c : comienzo declarando las librerias que usare las cuales son math.h y stdio.h. Luego delcaro mi funcion maestra con int main (). Despues declaro mis variables enteras con int. Indico con while() las opciones a realizar por el usuario para las instrucciones de los programas. Inicio mi contador en 0 con count=0. Indico mprimo instrucciones al usuario de ingresar su ranto con printf y las ingresa con scanf. Indico con while que mi rango debe tener un maximo de 100 numeros while((p2-p1)>100). Luego indico mi intervalo y que incrementara una unidad cada vez que se repitan mis instrucciones for(i=p1; i<=p2; i++) iniciara con mi valor igual a uno mi primo primo=1;  e indicara que para determinar el numero primo el resultado de la condicion debe ser cero if((i%j)==0). Si el residuo es uno entonces es primo if(primo==1){ e imprime los numeros en maximo 20 digitos por renglon if(count%20==0 ){. Finalmente pregunta al usuario si quiere volver a realizar la operacion o salir del programa printf("\n Introduce 1 si quieres volver a realizar el programa, 2 si quieres salir: \n");  y declaramos la opcion al principio del programa con while para realizar el ciclo. scanf("%i", &op);
+
+
+
 
 
 
