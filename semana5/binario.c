@@ -23,7 +23,7 @@ int main(){
 				/*Ejecuta accion de elegir la opcion deseada para conversion en cuanto a lo que eliga el usuario*/
 				switch(op){ 
 
-				/*Indic a el caso 1*/
+				/*Indica el caso 1*/
 				case 1:
 			/*Le pregunta al usuario que numero desea convertir a decimal*/
 			printf("Introducir el numero binario que desee convertir a decimal \n");
