@@ -1,4 +1,4 @@
-//Creado por Diana Ailed Hernández BUstos el 05/08/18
+
 
 #include<stdio.h> //Incluyo la librería que voy a usar
 
