@@ -82,7 +82,8 @@ int main(){
 					/*Si el numero es divisible entre dos y n o tiene residuo, el siguiente en el string sera 0*/							}
 					else{ 
 
-					binary[count++]='0';//El carácter string va ir relacionado con el contador, ya que es importante el orden para determinar el número binario. En este caso la posición "x" tendrá un valor de 0.
+					/*Relacionamos los caracteres del string conel contador ya que su posición es importante para determinar el valor decimal de los numeros binarios*/
+					binary[count++]='0';
 							}
 					/*La operacion me ayudara para que el decimal cambie conforme avancen los while loops*/
 					dec= dec/2; 
