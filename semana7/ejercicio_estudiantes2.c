@@ -19,9 +19,10 @@ int main (){
 
 			printf("Semestre \n");
 			scanf("%i",&sem[i]);
-			if(sem[i]==1){sem1=sem1++;}
-			else(sem[i]==2);{sem2=sem2++;}
-			if (sem[i]==3);{sem3=sem3++;}
+
+			if (sem[i]==1)++sem1;   
+			else if (sem[i]==2)++sem2;
+			else if(sem[i]==3)++sem3;
 
 			printf("Promedio \n");
 			scanf("%f",&prom[i]);
@@ -32,15 +33,12 @@ int main (){
 
 					}
 
-			printf("El numero de estudiates en semestre uno es %i, en semestre 2 es %i y en semestre 3 es %i",sem1,sem2,sem3);
+			printf("El numero de estudiates en semestre uno son %i, en semestre 2 es %i y en semestre 3 es %i \n",sem1,sem2,sem3);
 
 			promedios=promedios/10;
-			printf("El promedio total es %f",promedios);
+			printf("El promedio total es %f \n",promedios);
 
-			
-
-
-
+		
 
 
 	return 0;
