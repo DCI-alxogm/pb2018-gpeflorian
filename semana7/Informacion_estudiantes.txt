@@ -1,0 +1,12 @@
+#nombre sexo edad semestre promedio
+
+Lupita F 25 1 8.5
+Manolo M 21 2 8.7
+Maria F 20 3 9.5 
+Luisa F 19 1 7.8
+Armando M 23 2 7.9
+Ximena F 22 3 5.5
+Daniel M 24 1 9.8
+Juan M 29 2 7.5
+Mili F 27 3 9.8
+David M 19 1 7.8
