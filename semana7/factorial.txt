@@ -1,0 +1,55 @@
+El exponencial de 22.000000 es 3584912896.000000 
+El logaritmo de 22.000000 es 3.091043 
+El seno es de 22.000000 es -0.507141 
+El coseno de 22.000000 es -57.293335 
+La raiz cuadrada de 22.000000 es 4.690416 
+El exponencial de 25.000000 es 72004902912.000000 
+El logaritmo de 25.000000 es 3.218876 
+El seno es de 25.000000 es -7.583170 
+El coseno de 25.000000 es 56.791538 
+La raiz cuadrada de 25.000000 es 5.000000 
+El exponencial de 28.000000 es 1446257098752.000000 
+El logaritmo de 28.000000 es 3.332205 
+El seno es de 28.000000 es 15.521704 
+El coseno de 28.000000 es -55.153061 
+La raiz cuadrada de 28.000000 es 5.291502 
+El exponencial de 31.000000 es 29048849825792.000000 
+El logaritmo de 31.000000 es 3.433987 
+El seno es de 31.000000 es -23.149570 
+El coseno de 31.000000 es 52.410690 
+La raiz cuadrada de 31.000000 es 5.567764 
+El exponencial de 34.000000 es 583461710594048.000000 
+El logaritmo de 34.000000 es 3.526361 
+El seno es de 34.000000 es 30.314098 
+El coseno de 34.000000 es -48.619324 
+La raiz cuadrada de 34.000000 es 5.830952 
+El exponencial de 37.000000 es 11719142537166848.000000 
+El logaritmo de 37.000000 es 3.610918 
+El seno es de 37.000000 es -36.871891 
+El coseno de 37.000000 es 43.854839 
+La raiz cuadrada de 37.000000 es 6.082763 
+El exponencial de 40.000000 es 235385270340419584.000000 
+El logaritmo de 40.000000 es 3.688879 
+El seno es de 40.000000 es 42.691689 
+El coseno de 40.000000 es -38.212601 
+La raiz cuadrada de 40.000000 es 6.324555 
+El exponencial de 43.000000 es 4727839526297272320.000000 
+El logaritmo de 43.000000 es 3.761200 
+El seno es de 43.000000 es -47.657013 
+El coseno de 43.000000 es 31.805538 
+La raiz cuadrada de 43.000000 es 6.557438 
+El exponencial de 46.000000 es 94961195300687970304.000000 
+El logaritmo de 46.000000 es 3.828641 
+El seno es de 46.000000 es 51.668484 
+El coseno de 46.000000 es -24.761885 
+La raiz cuadrada de 46.000000 es 6.782330 
+El exponencial de 49.000000 es 1907346640522931339264.000000 
+El logaritmo de 49.000000 es 3.891820 
+El seno es de 49.000000 es -54.645809 
+El coseno de 49.000000 es 17.222624 
+La raiz cuadrada de 49.000000 es 7.000000 
+El exponencial de 52.000000 es 38310081899409610637312.000000 
+El logaritmo de 52.000000 es 3.951244 
+El seno es de 52.000000 es 56.529400 
+El coseno de 52.000000 es -9.338651 
+La raiz cuadrada de 52.000000 es 7.211102 
