@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*Este programa es un ejemplo para la funcion array vista en clase. Creado en Septiempre 10 del 2018. Creado por Guadalupe Florian*/
+=======
+/*Este programa es un ejemplo para la funcion array vista en clase. Creado en Septiempre 10 del 2018 por Guadalupe Florian.*/
+>>>>>>> 0ca4ae201d21c7cb106b58735843a8ca60ca73aa
 
 
 /*Me indica las librerias que usare para el programa*/
