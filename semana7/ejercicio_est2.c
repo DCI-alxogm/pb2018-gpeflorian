@@ -1,4 +1,4 @@
-/*Este programa solicita informacion a cerca de un numero predeterminado de estudiantes y a un resumen de la inforamcion al final del programa. Creado por Guadalupe Florian el 10 de Septiemre del 2018*/
+/*Este programa solicita informacion a cerca de un numero predeterminado de estudiantes y a un resumen de la inforamcion al final del programa que pasa a un archivo .txt. Creado por Guadalupe Florian el 10 de Septiemre del 2018*/
 
 
 /*Me indica las librerias que usare para el programa*/

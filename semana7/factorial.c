@@ -1,4 +1,4 @@
-/*Este programa evaluara una variable x en exponencial, logaritmo, seno, coseno y raiz cuadrada en un intervalo y con un espaciado definido por el usuario.*/
+/*Este programa evaluara una variable x en exponencial, logaritmo, seno, coseno y raiz cuadrada en un intervalo y con un espaciado definido por el usuario y guarda la informacion en un archivo .txt . Creado por Guadalupe Florian el 14 de Septiembre del 2018*/
 
 /*Se indica la libreria que usamos*/
 #include <stdio.h>
