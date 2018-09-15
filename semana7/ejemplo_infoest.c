@@ -6,11 +6,13 @@
 /*Funcion maestra del programa*/
 int main (){
 
+		/*Declaramos la variable de archivo*/
 		FILE *archivo;
 			
 			/*Indico que quiero crear un archivo .txt llamado text*/
 			archivo=fopen("Informacion_estudiantes.txt","w");
 			
+				/*Cerramos el archivo*/	
 				fclose(archivo);
 
 
