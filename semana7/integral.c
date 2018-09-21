@@ -1,9 +1,10 @@
 
-/*Este programa lee un archivo  Creado por Guadalupe Florian en Septiempre 10 del 2018.*/
+/*Se escribo un programa que lee de un archivo la potencia de la funcion x^p y p>=1, así como el intervalo en el que se evaluará la funcion un N número de veces. También calculará una integral f(x) desde el valor m{inimo del intervalo hasta el valor x. Creado por Guadalupe Florian en Septiempre 19 del 2018.*/
 
 
 /*Me indica las librerias que usare para el programa*/
 #include<stdio.h>
+/*Se usa la libreria de Math por el uso de potencial */
 #include<math.h>
 
 
@@ -71,15 +72,15 @@ int main (){
 									}
 					
 
-		
+								/*Indico que al último resutltado de f lo multiplico por el resultado de h*/
 								f*=h;
 
 			
-
+			/*Imprimo a mi documento Resultados.txt los resultados de las variables x, x1 y f*/
 			fprintf(resultados,"%f    %f    %f \n",x,x1,f);
 
 						}
-
+			/*Cierro el documento Resultados.txt*/
 			fclose(resultados);
 				
 		

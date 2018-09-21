@@ -1,4 +1,4 @@
-/*Esta serie de instrucciones me ayudan a crear un archivo. Creado por Guadalupe Florian el 12 de Septiembre del 2018.*/
+/*Esta serie de instrucciones me ayudan a crear un archivo. Creado por Guadalupe Florian el 19 de Septiembre del 2018.*/
 
 /*Me indica las librerias que usare para el programa*/
 #include<stdio.h>
