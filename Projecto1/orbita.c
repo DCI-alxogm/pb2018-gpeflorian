@@ -34,44 +34,47 @@ int main (){
 		/*Se cierra el archivo venus.txt*/
 		fclose(archivo);
 
+		
+			resultados=fopen("resultados_orbita.txt","w");
 
-			printf("  Día        X         Y         Z        VX        VY        VZ \n");
+				fprintf(resultados,"  Día         X          Y          Z         VX         VY         VZ \n");
 
-			for(i=0;i<T;i+=h){
 
-				r=sqrt(pow(x0,2)+pow(y0,2)+pow(z0,2));
-					
-				X=x0+vx0*h;
+				for(i=0.0;i<=T+h;i+=h){
+
+					r=sqrt(pow(x0,2.0)+pow(y0,2.0)+pow(z0,2.0));
+						
+					X=x0+vx0*h;
 				
-				Y=y0+vy0*h;
+					Y=y0+vy0*h;
 
-				Z=z0+vz0*h;
+					Z=z0+vz0*h;
 
-				VX=vx0-h*((G*M*x0)/pow(r,3));
+					VX=vx0-h*((G*M*x0)/pow(r,3.0));
 
-				VY=vy0-h*((G*M*y0)/pow(r,3));
+					VY=vy0-h*((G*M*y0)/pow(r,3.0));
 					
-				VZ=vz0-h*((G*M*z0)/pow(r,3));
+					VZ=vz0-h*((G*M*z0)/pow(r,3.0));
 					
-				x0=X;
+					x0=X;
 	
-				y0=Y;
+					y0=Y;
 
-				z0=Z;
+					z0=Z;
 
-				vx0=VX;
+					vx0=VX;
 	
-				vy0=VY;
+					vy0=VY;
 
-				vz0=VZ;
+					vz0=VZ;
 			
-				
+						fprintf(resultados,"%lf ",i*365);
+					
+						fprintf(resultados," %lf  %lf  %lf  %lf  %lf  %lf \n",X,Y,Z,VX,VY,VZ);
 
-				printf("%lf %lf %lf %lf %lf %lf \n",X,Y,Z,VX,VY,VZ);
+				}	
 
-			}	
-
-			
+			fclose(resultados);
 			
 
 
