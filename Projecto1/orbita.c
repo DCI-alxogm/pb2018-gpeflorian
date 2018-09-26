@@ -15,7 +15,7 @@ int main (){
 	FILE *resultados;
 	/*Declaro variables tipo enteras y de punto flotante*/
 	int M,T;
-	double x0,y0,z0,vx0,vy0,vz0,X,Y,Z,VX,VY,VZ,r,G=39.4784176,m,h,i;
+	double x0,y0,z0,vx0,vy0,vz0,X,Y,Z,VX,VY,VZ,r,G=39.4784176,m,h,i,count=0;
 
 
 	/*Se lee el archivo venus.txt, donde se encuentran valores de x,y,z,X,Y,Z*/
@@ -41,7 +41,7 @@ int main (){
 
 
 				for(i=0.0;i<=T+h;i+=h){
-
+					
 					r=sqrt(pow(x0,2.0)+pow(y0,2.0)+pow(z0,2.0));
 						
 					X=x0+vx0*h;
@@ -56,17 +56,6 @@ int main (){
 					
 					VZ=vz0-h*((G*M*z0)/pow(r,3.0));
 					
-					x0=X;
-	
-					y0=Y;
-
-					z0=Z;
-
-					vx0=VX;
-	
-					vy0=VY;
-
-					vz0=VZ;
 			
 						fprintf(resultados,"%lf ",i*365);
 					
