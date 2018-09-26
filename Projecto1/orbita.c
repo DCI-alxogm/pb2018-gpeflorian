@@ -14,13 +14,15 @@ int main (){
 	FILE *archivo;
 	FILE *resultados;
 	/*Declaro variables tipo enteras y de punto flotante*/
-	int i,M=1,N=365;
-	double x,y,z,X,Y,Z,xo,yo,zo,xf,yf,zf,G=39.4784176;
+	int i,M,T,to=0,ti;
+	double x,y,z,X,Y,Z,,G=39.4784176,m,h;
 
 
 	/*Se lee el archivo venus.txt, donde se encuentran valores de x,y,z,X,Y,Z*/
 	archivo=fopen("venus.txt","r");
 	
+
+			fscanf(archivo,"%lf %lf %lf %lf",&m,&M,&T,&h);
 
 			/*Mi programa lee en orden los valores de poisicion y tiempo de venus*/
 			fscanf(archivo,"%lf %lf %lf",&x,&y,&z);
@@ -32,14 +34,17 @@ int main (){
 		/*Se cierra el archivo venus.txt*/
 		fclose(archivo);
 
-		
+		ti[365]=to+h
 
-			for(t=0,t<N,i++){
+			for(t=to,t<T,i++){
 				
 		
-				h=ti-to
-					}		
+				x[i]=0
+					 }	
 
+			
+			printf()
+  
 
 
 
