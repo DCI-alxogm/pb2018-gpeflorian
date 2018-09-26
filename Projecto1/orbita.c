@@ -65,7 +65,7 @@ int main (){
 
 				vz0=VZ;
 			
-				printf("%lf ",i*365);
+				
 
 				printf("%lf %lf %lf %lf %lf %lf \n",X,Y,Z,VX,VY,VZ);
 
