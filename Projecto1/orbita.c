@@ -19,7 +19,7 @@ int main (){
 
 
 	/*Se lee el archivo venus.txt, donde se encuentran valores de x,y,z,X,Y,Z*/
-	archivo=fopen("venus.txt","r");
+	archivo=fopen("coordenadas_archivo.txt","r");
 	
 			/*Se lee la informacion de la masa del planeta, la masa de la estrella, el tiempo y el espaciado en unidades astronómicas*/
 			fscanf(archivo,"%lf %i %i %lf",&m,&M,&T,&h);

@@ -11,7 +11,7 @@ int main (){
 		FILE *archivo;
 			
 			/*Indico que quiero crear un archivo .txt llamado text*/
-			archivo=fopen("venus.txt","w");
+			archivo=fopen("coordenadas_archivo.txt","w");
 			
 				/*Cerramos el archivo*/	
 				fclose(archivo);
