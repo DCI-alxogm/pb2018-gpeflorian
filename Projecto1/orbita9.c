@@ -25,7 +25,7 @@ int main (){
 		archivo=fopen("coordenadas_archivo9.txt","r");
 	
 
-			for (a=0;a<=2;a++){
+			for (a=0;a<=8;a++){
 
 				snprintf(cadena,sizeof(char)*32,"Planeta%i.txt",k);
 				resultados=fopen(cadena,"wb");

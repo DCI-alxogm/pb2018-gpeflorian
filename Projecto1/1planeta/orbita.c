@@ -32,7 +32,7 @@ int main (){
 			
 
 			/*Se escribe un archivo llamado resultados_orbita.txt para guardar los resultados de los cálculos realizados*/
-			resultados=fopen("marte.txt","w");
+			resultados=fopen("pluton.txt","w");
 
 				/*Se imprime al documento .txt la clasificación de la información calculada por columna*/
 				fprintf(resultados,"  Día         X          Y          Z         VX         VY         VZ \n");
