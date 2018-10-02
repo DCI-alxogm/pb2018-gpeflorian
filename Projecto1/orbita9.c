@@ -1,48 +1,51 @@
-/*Este programa calcula las velocidades y posiciones de un planeta a la vez a lo largo de un lapso de 365 días o un año. Al final usamos esta información para crear una gráfica en 3D que mostrará la órbita elíptica del planeta. Creado el 30 de Septiembre del 2018 por Guadalupe Sinaí Florián Landa.*/
+/*Este programa calcula las velocidades y posiciones de un planeta a la vez a lo largo de un lapso de tiempo en unidad años. Usaremos esta información para crear una gráfica en 3D que mostrará la órbita elíptica de cada planeta. Creado el 30 de Septiembre del 2018 por Guadalupe Sinaí Florián Landa.*/
 
 
-/*Me indica las librerias que usare para el programa*/
+/*Me indica la librería estándar que se usará para el programa*/
 #include<stdio.h>
-/*Se usa la libreria de Math por el uso de potencial */
+/*Se usará la librería de Math por el uso de potencial */
 #include<math.h>
+/*Librerias que se usarán para la función snprintf*/
 #include<stdlib.h>
 #include<string.h>
 
 
-/*Funcion maestra del programa*/
+/*Función maestra del programa*/
 int main (){
 
-	/*Declaro variables FILE para el archivo de que leeré la información y al que guardaré la información*/
+	/*Declaro variables FILE para el archivo de donde se leerán los datos de cada planeta, y el archivo donde se guardará la información*/
 	FILE *archivo;
 	FILE *resultados;
-	/*Declaro variables tipo enteras y de punto flotante para dar valores de un archivo y ralizar los cálculos para la órbita del planeta*/
+	/*Declaro variables de tipo enteras y de punto flotante para asignarles valores de un archivo y también ralizar los cálculos; ambos para obtener las coordenadas.*/
 	int M,T,a,k;
 	double x0,y0,z0,vx0,vy0,vz0,X,Y,Z,VX,VY,VZ,r,G,m,h,i;
 	char cadena [32];
 
 
-		/*Se lee el archivo venus.txt, donde se encuentran valores de x,y,z,X,Y,Z*/
+		/*Se abre el archivo coordenadas_archivo9.txt para su lectura, donde se encuentran valores de posición iniciales (x0,y0,z0) y velocidad iniciales (vx0,vy0,vz0)*/
 		archivo=fopen("coordenadas_archivo9.txt","r");
 	
-
+			/*Se inicia un ciclo donde se ejecutará la instrucción snprintf un número de 9 veces*/
 			for (a=0;a<=8;a++){
 
-				snprintf(cadena,sizeof(char)*32,"Planeta%i.txt",k);
+				/*Se formatean y guardan un numero máximo de  caracteres al buffer. Se usará para nombrar a cada documento creado por el programa para guardar las coordenadas calculadas, diferenciándolas con el número k que incrementará una unidad en cada repetición del ciclo*/
+				 snprintf(cadena,sizeof(char)*32,"Planeta%i.txt",k);
+				/*Se indica que el archivo que se escribirá con el nombre de la cadena de caracteres indicada por snprintf será el de *resultados */
 				resultados=fopen(cadena,"wb");
 
-				/*Se lee la informacion de la masa del planeta, la masa de la estrella, el tiempo y el espaciado en unidades astronómicas*/
+				/*Se lee la información de la masa del planeta, la masa de la estrella, el tiempo y el espaciado en unidades astronómicas y años*/
 				fscanf(archivo,"%lf %i %i %lf",&m,&M,&T,&h);
 
-				/*Mi programa lee en orden los valores de poisicion y tiempo del planeta*/
+				/*Se leen en orden los valores de poisición y tiempo iniciales de un planeta a la vez*/
 				fscanf(archivo,"%lf %lf %lf",&x0,&y0,&z0);
 
 				fscanf(archivo,"%lf %lf %lf",&vx0,&vy0,&vz0);
 
-				/*Calculo la constante de gravitación en años que es 4*pi cuadrada*/
+				/*Se calcula la constante de gravitación en unidades astronómicas y años, que es igual a 4 por* pi cuadrada pow */
 				G=4.0*pow(3.141592653589,2);			
 
 
-				/*Convierto las velocidades iniciales a años multiplicando por 365*/
+				/*Se convierten las velocidades iniciales de días a años multiplicando por 365*/
 				vx0*=365.242;
 				vy0*=365.242;
 				vz0*=365.242;
@@ -50,14 +53,14 @@ int main (){
 
 
 
-						/*Se imprime al documento .txt la clasificación de la información calculada por columna*/
+						/*Se imprime al documento de texto, conteniendo los resultados de cada planeta,  la clasificación de la información calculada por columna*/
 						fprintf(resultados,"  Día         X          Y          Z         VX         VY         VZ \n");
 
 
-				/*Se inicia un ciclo for en cero, que será menor o igual al tiempo T y tendrá un espaciado (se le sumará) de h en cada cálculo*/
+				/*Se inicia un ciclo for iniciando en cero, que se detendrá al llegar a un valor menor o igual al tiempo T y tendrá un espaciado (se le sumará) de h en cada cálculo*/
 				for(i=0.0;i<=T;i+=h){
 						
-					/*Se hacen los cálculos para la posición siguiente usando el espaciado h, que es igual a la posición inicial mas la velocidad inicial (en x, y o z) por h*/
+					/*Se hacen los cálculos para la posición siguiente usando el espaciado h, que es igual a la posición inicial mas la velocidad inicial en (x,y,z) por h*/
 					X=x0+vx0*h;
 				
 					Y=y0+vy0*h;
@@ -68,14 +71,14 @@ int main (){
 					r=sqrt(pow(x0,2.0)+pow(y0,2.0)+pow(z0,2.0));
 
 
-					/*Se hacen los cálculos de la veolcidad que sigue usando el espaciado h, que es igual al producto de G, M y H dividido entre el radio al cubo, todo esto multiplicado por h y finalmente se resta de la velocidad inicial ya sea en x, y o z.*/
+					/*Se hacen los cálculos de la veolcidad final, que es igual al producto de G, M y (x0,y0,z0) dividido entre el radio al cubo, todo esto multiplicado por h y finalmente se resta de la velocidad inicial (vx0,vy0,vz0)*/
 					VX=vx0-h*((G*M*x0)/pow(r,3.0));
 
 					VY=vy0-h*((G*M*y0)/pow(r,3.0));
 					
 					VZ=vz0-h*((G*M*z0)/pow(r,3.0));
 					
-					/*Se indica al programa que en cada repetición del ciclo for la x, y o z finales se convertiran en las nuevas x, y o z iniciales, y así sucesivamente*/
+					/*Se indica al programa que en cada repetición del ciclo for la (X,Y,Z) y (VX,VY,VZ) finales se convertiran en las nuevas (x0,y0,z0) y (vx0,vy0,vz0) iniciales, y así sucesivamente en cada repetición del ciclo*/
 					x0=X;
 					
 					y0=Y;
@@ -89,26 +92,27 @@ int main (){
 					vz0=VZ;
 
 					
-						/*Se imprime el día al archivo de texto FILE resultados por repeticíón del ciclo*/
+						/*Se imprime el día al archivo de texto FILE *resultados, por repetición del ciclo. Esto ayuará a ubicar las coordenadas en el lapso de timepo T*/
 						fprintf(resultados,"%lf ",i*365);
 					
-						/*Se imprimen las velocidades y posiciones calculadas al archivo de texto FILE resultados por repetición del ciclo*/
+						/*Se imprimen las velocidades y posiciones finales al archivo de texto FILE *resultados*/
 						fprintf(resultados," %lf  %lf  %lf  %lf  %lf  %lf \n",X,Y,Z,VX,VY,VZ);
 
 				}	
-			/*Se cerra el archivo de texto FILE resultados*/
+			/*Se cierra el archivo de texto FILE *resultados */
 			fclose(resultados);
+			/*Incrementa k en una unidad en el nombre del documento *resultados, cada vez que uno nuevo se escribe y finaliza*/
 			k++;
 
 		}
 
-		/*Se cierra el archivo venus.txt*/
+		/*Se cierra el archivo de texto FILE *archivo */
 		fclose(archivo);
 	
 			
 
 
 
-	/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara signo de error*/
+	/*Indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviará signo de error*/
 	return 0;
 	}
