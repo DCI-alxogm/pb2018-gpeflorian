@@ -9,33 +9,39 @@
 
 		/*Se delcaran variables enteras*/
 		int num,i,*ptr,sum=0;
-		/*Se reserva el espacio en la mamoria usando malloc, se le indica que el total de bytes son el valor num por el tamaño de una variable entera*/
+		/*Se reserva el espacio en la mamoria usando malloc, que asigna un número de bytes indicados y devuelve un apuntador al primer byte del espacio asignado (un solo bloque), y se le indica que el total de bytes son el valor num por el tamaño de una variable entera*/
 		ptr=(int*)malloc(num*sizeof(int));
 
-		/*Se pide al usuario ingresar el número de elementos que desea sumar*/
+		/*Se imprime a la pantalla la instrucción de introducir un numero de elementos*/
 		printf("Introduce el numero de elementos: \n");
+		/*Lee el dato ingresado, ya formateado, del stdin*/
 		scanf("%d",&num);
 
-		/*Si el número del elementos es cero, se indica que no hay memoria reservada*/
+		/*Verifica si la condición de que el valor ptr es nulo, se imprima a la pantalla que no hay memoria reservada*/
 		if(ptr==NULL)
 		{	
 		printf("Error! mamoria no reservada."),
+
+		/*Indica la finalización exitosa del programa, en caso que la condicion if anterior se cumpla*/
 		exit(0);
 		}
 
-		/*Se pide al usuario introducir los valores del arreglo*/
+		/*Se imprime a la pantalla la instrucción de colocar los valores del arreglo*/
 		printf("Introduce los elementos del arreglo:\n");
-		/*Se inicia ciclo en cero, se detenrá quando haya llegado al iésimo ciclo con un valor menor a num y se le sumará una unidad por ciclo*/
+
+		/*Iniciamos un ciclo donde el contador inicia en cero, la condición de seguir realizando el ciclo es que se repita un un numero menor a num veces y que a la variable i se le aumente una unidad cada vez que se completa la serie de instrucciones*/
 		for(i=0;i<num;++i)
 		{
-			/*El programa lee los valores ingresados al arreglo*/
+			/*Lee el dato ingresado, ya formateado, del stdin*/
 			scanf("%d",ptr + 1);
+
 			/*El programa suma los valores del arreglo*/
 			sum += *(ptr + 1);
 		}
 
-		/*El programa imprime el resultado de la suma realizada*/
+		/*Se imprime a la pantalla el resultado de sum*/
 		printf("Sum = %d\n",sum);
+
 		/*Se libera la memoria no usada por los apuntadores*/
 		free(ptr);
 
