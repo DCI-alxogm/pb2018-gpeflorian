@@ -6,24 +6,15 @@
 	int main () {
 
 		FILE *archivo;
-		int i,nmin=500,nlines;
+		int i;
 		float sum=0,*ptr;
 
 		archivo=fopen("promedio.txt","r");
 
-		*ptr=(float*) calloc(nmin,sizeof(float));
-
-		
-		while (fgets(nmin,500,(FILE*)archivo) !=NULL)
-		{
-		nlines++;
-		}
-		printf("%i \n");
+		ptr=(float*) calloc(267,sizeof(float));
 		
 		
-
-		
-			for (i=0;i<nlines;i++){		
+			for (i=0;i<267;i++){		
 
 			fscanf(archivo,"%f \n",ptr + i);
 		
@@ -31,11 +22,12 @@
 		
 			}
 
-		sum /= nlines;
+		sum /= 267;
 
 		printf("El promedio de los datos de su archivo es: %f\n",sum);
 
 		free(ptr);
+		fclose(archivo);
 
 	return 0;
 
