@@ -1,0 +1,1 @@
+En cada programa uso #incluse para indicar las librerias que usare el en programa e int main () para indicar la funcion maestra.Asi como declaración de variable int para variables enteras y float para variables de punto flotante. Y return 0 que me indica si la secuencia de instrucciones sucedio correctamente, de lo contrario enviara un signo de error.
