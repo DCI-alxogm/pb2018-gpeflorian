@@ -25,7 +25,7 @@ float cuadrado();
 		/*El valor de x multiplicado por sí mismo será guardado en la variable x2*/
 		x2= x*x;
 		/*Imprime a la pantalla las instrucciones  para el usuario*/	
-		printf("El cuadrado de %f es \n", x);	
+		printf("El cuadrado de %f es ", x);	
 		/*La función return regresa e valor de x2 al programa fuente */
 		return x2;	
 	}
