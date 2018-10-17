@@ -3,7 +3,7 @@
 /*Se incluyen las librerías que se usarán en el programa*/
 #include<stdio.h>
 
-/*main debe regresar un integral e int especifica el tipo de variable que la función regresará*/
+/*Permite introucir argumentos al momento de ejecutar el programa*/
 int main (int argc, char *argv[]){
 
 	/*Se imprime a la pantalla el nombre del programa que se está ejecutando*/

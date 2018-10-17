@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
+/*Permite introucir argumentos al momento de ejecutar el programa*/
 int main( int argc, char *argv[]){
 
 	/*Se imprime a la pantalla el nombre del programa que se está ejecutando*/
@@ -19,8 +19,9 @@ int main( int argc, char *argv[]){
     	/*Declaramos una variable de tipo archivo*/
    	 FILE *fp;
 
-	/**/
+	/*Si se entran 5 agrumentos se realizarán las acciones dentro del condicional if*/
     	if(argc == 5){
+		/*Permite entrar argumentos Tin, Tfin, num y nombre de archivo al ejecutar el programa*/
        		Tin=atof(argv[1]);
       		Tfin=atof(argv[2]);
      		num=atoi(argv[3]);
@@ -29,6 +30,7 @@ int main( int argc, char *argv[]){
 
 	  /*Abre un archivo para su actualización (leer o escribir)*/
       	  fp= fopen(nombre_archivo, "w+");
+	  /*Imprime los argumentos entrados al documento*/
       	  fprintf(fp, "Tin: %f, \t Tfin: %f, \t N: %i", Tin, Tfin, num);
 	  /*Colocar lo que se quiere hacer o escribir en el archivo*/
        	  fclose(fp);

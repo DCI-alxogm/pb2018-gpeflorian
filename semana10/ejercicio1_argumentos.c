@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/*main debe regresar un integral e int especifica el tipo de variable que la función regresará*/
+/*Permite introucir argumentos al momento de ejecutar el programa*/
 int main(int argc, char *argv[]){
 	printf("El nombre del programa que estas ejecutando es: %s\n", argv[0]);
 
