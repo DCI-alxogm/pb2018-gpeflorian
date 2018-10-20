@@ -1,48 +1,34 @@
-/*Se indica la libreria que usamos*/
-#include <stdio.h>
-/*Librería se usará por el uso de seno, coseno, log y exponencial*/
-#include<math.h>
 
-/*Declaración de la función exponencial, dicho nombre debe ser único para dicha función*/
-void exponencial();
-/*Declaración de la función logaritmo, dicho nombre debe ser único para dicha función*/
-float logaritmo(float h);
-void seno(float j);
-float coseno();
+/*Este programa calcula el cuadrado de un número. Creado por Gaudalupe Florian el 17 de octubre del 2018.*/
 
+/*Librerías usadas en el programa*/
+#include<stdio.h>
+#include<stdlib.h>
 
+/*Declaración de la función*/
+void cuadrado(float x);
 
+	int main(float argc, char *argv[]){
 
-/*Funcion maestra del programa*/
-int main()
-{
+	float x;
+		
 
-		/*Declaracion de variables de tipo punto flotante de 6 cifras*/
-		float x1;
-		/*El valor que tome la función cuadrado() será guardada en x1*/
-		x1=coseno();
-		/*Imprime el valor calculado con float coseno()*/
-		printf("%f \n",x1);
+		/*Si se dan 2 argumentos se imprimen a la pantalla*/
+		if(argc==2){
+			x=atof(argv[1]);
+			cuadrado(x);
+		}
 
-		/*Se hace uso de la función*/
-		exponencial();
+		/*Si se ingresan más de 2 argumentos, se pide que se ingresenmenos*/
+		else if(argc>2){
+			printf("Favor de ingresar un numero menor de argumentos\n");
+		}
 
+		/*Si no se ingresa ningún argumento, se pide ingresar al menos uno*/
+		else{
+			printf("Se requiere de al menos 1 argumento \n");
+		}
 
+	return 0;
 
-		return 0;
-}	
-/*Definimos la acción que realizará la función, en este caso es calcular el coseno de un número*/
-float coseno()
-{
-		/*Declaracion de variables de tipo punto flotante de 6 cifras*/
-		float xo,res_cos;
-		/*Imprime a la pantalla las instrucciones  para el usuario*/
-		printf("Favor de ingresar el número para calcular su coseno en grados sexagecimales:\n");
-		/*Lee el dato ingresado, ya formateado, del stdin*/
-		scanf("%f",&xo);
-		/*El valor de res_cos es el coseno del valor ingresado por 180*pi*/
-		res_cos=cos(xo)*57.29557795131;
-		printf("El coseno de %f es ",xo);
-		/*La función return regresa e valor de x2 al programa fuente*/
-		return res_cos;
-}
+	}
