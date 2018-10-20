@@ -1,0 +1,1 @@
+En cada programa uso #include para indicar las librerias que usarán en los programas, int main () para indicar la funcion maestra del programa, int para declarar variables enteras y float para declarar variables de punto flotante. También return 0 para verificar si la secuencia de instrucciones sucedió correctamente.
