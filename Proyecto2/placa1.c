@@ -25,26 +25,26 @@ void temperaturas(){
 		
 		/*Declaro una variable de tipo flotante, la cuál guardará las coordenadas xy de las temperaturas de la placa*/
 		float placa [size][size];
-		/*Indico un ciclo dónde el contador de las coordenadas "y" inician en cero, la condición de seguir realizando el ciclo es que se repita un un numero menor al valor de la variable "size" y que a la variable i se le aumente una unidad cada vez que se completa la serie de instrucciones*/ /*Creo un ciclo donde inicializo mis coordenadas "y" en cero, dicha acción se repiten las instrucciones dentro del ciclo for hasta que haya un número de "size" coordenadas "y" en la placa*/
+		/*Indico un ciclo dónde el contador de las coordenadas "y" inician en cero, la condición de seguir realizando el ciclo es que se repita un un numero menor al valor de la variable "size" (largo y ancho de la placa) y que a la variable i se le aumente una unidad cada vez que se completa la serie de instrucciones*/ /*Creo un ciclo donde inicializo mis coordenadas "y" en cero, dicha acción se repiten las instrucciones dentro del ciclo for hasta que haya un número de "size" coordenadas "y" en la placa*/
 		for (cy=0;cy<size;cy++){
 			/*Creo un ciclo donde inicializo mis coordenadas "x" en cero, y se repiten las instruccioens dentro del ciclo for hasta que haya un número de "size" coordenadas "x" en la placa*/
 			for(cx=0;cx<size;cx++){
 
-				/*Los valores de mis coordenadas x,y se guardaránen los arregloos cx,cy respectivamente*/
+				/*Los valores de mis coordenadas x,y se guardarán en los arregloos cx,cy respectivamente*/
 				placa [cx][cy]=0;
 
 			}
 		}
 			/*Éste ciclo for inicializa las coordenadas "y" en cero, cada vez que se realize dicho ciclo se le sumará una unidad al contador y terminará cuando el conteo llegue al valor de size*/
 			for(cy=0;cy<size;cy++){
-				/*El valor de las temperaturas 1 y 2 se guardarán en las coordenadas (0,cy) y (size-1,cy) respectivamente*/
+				/*El valor de las temperaturas 1 y 2 se guardarán en las coordenadas (0,cy) , que es la primera columna, y (size-1,cy), que delimita las temperaturas que estarán cambiando en la placa en la coordenada y, respectivamente*/
 				placa[0][cy]=T1;
 				placa[size-1][cy]=T2;
 
 			}
 			/*Inicializo mis coordenadas "x" en cero, y se repiten las instrucciones dentro del ciclo for hasta que haya un número de "size" coordenadas "x" en la placa*/
 			for (cx=0;cx<size;cx++){
-				/*El valor de las temperaturas 1 y 2 se guardarán en las coordenadas (cx,0) y (cx,size-1) respectivamente*/
+				/*El valor de las temperaturas 1 y 2 se guardarán en las coordenadas (cx,0), que es la primera fila, y (cx,size-1), que delimita las temperaturas que estarán cambiand en la placa en la coordenada x, respectivamente*/
 				placa[cx][0]=T3;
 				placa[cx][size-1]=T4;
 
@@ -57,16 +57,16 @@ void temperaturas(){
 					/*Inicializo mis coordenadas x,y en uno, y la operacion dentro de dicho ciclo se realizará un número de size-1 veces (largo y ancho de la placa)*/
 					for (cy=1;cy<size-1;cy++){
 					for (cx=1;cx<size-1;cx++){
-						/*Los valores de las coordenadas cx,cy (ya con los valores de las temperaturas guardados en ellas) tomarán el valor de la suma de las temperaturas de arriba, abajo, izquierda y dereha, tomando como referencia la una posición específica cx,cy, y temperaturas se sumarán y se dividirán entre cuatro; hauendo uso del método Gauss-Seidel. */
+						/*Los valores de las coordenadas cx,cy (ya con los valores de las temperaturas guardados en ellas) tomarán el valor de la suma de las temperaturas de arriba, abajo, izquierda y dereha, tomando como referencia la una posición específica cx,cy, y temperaturas se sumarán y se dividirán entre cuatro; haciendo uso del método Gauss-Seidel. */
 						placa[cx][cy]=(placa[cx+1][cy]+placa[cx-1][cy]+placa[cx][cy+1]+placa[cx][cy-1])/4;
 
 					}
 					}
 				/*Ciclo indica que mientras las instruccioes dentro de éste se realizen un número que tenga una unidad menor a 40, dicho ciclo se seguirá realizando*/
 				while (a<40) {
-					/*Se guardará un arreglo con cadenas de hasta 32 caracteres*/
+					/*Se guardará un arreglo con una cadena de hasta 32 caracteres*/
 					char buffer [32];
-					/*Se formatean y guardan un numero máximo de caracteres al buffer. Se usará para nombrar a cada documento creado por el programa para guardar las coordenadas calculadas, diferenciándolas con el número a que incrementará una unidad en cada repetición del ciclo*/
+					/*Se formatean y guardan un numero máximo de caracteres al buffer. Se usará para nombrar a cada documento creado por el programa para guardar las coordenadas calculadas, diferenciándolas con el número que incrementará una unidad en cada repetición del ciclo, es decir, cada vez se se crea un documento*/
 					snprintf(buffer, sizeof(char)*32, "Placa_temp%i.ods",a);
 					a++;
 
@@ -78,7 +78,7 @@ void temperaturas(){
 								/*Se imprimen las temperaturas al archivo de resutlados*/
 								fprintf(results,"%f  ",placa[cx][cy]);
 							}
-
+						/*Se salta un a línea cuando un número de size coordenadas se calculen en la primera fila, y así sucesivamente para las demás*/
 						fprintf(results, "\n");
 
 						}	
@@ -86,6 +86,7 @@ void temperaturas(){
 					/*Se cierra cada archivo con las temperaturas del periodo calculadas*/
 					fclose(results);
 						
+						/*Se iguala a a cero para que la condición del ciclo while (a<40) se ejecute un número de 40 veces y no imprima archivos de más*/
 						a=0;
 					}
 				/*Se le suma al contador del ciclo for una unidad*/	
