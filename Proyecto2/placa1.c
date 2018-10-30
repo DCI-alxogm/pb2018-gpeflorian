@@ -58,7 +58,7 @@ void temperaturas(){
 				/*Se guardará un arreglo con una cadena de hasta 32 caracteres*/
 				char buffer [32];
 
-				/*Ciclo indica que mientras las instruccioes dentro de éste se realizen un número que tenga una unidad menor a 100, dicho ciclo se seguirá realizando*/
+				/*Ciclo indica que mientras las instruccioes dentro de éste se realizen un número que tenga una unidad menor a 101, dicho ciclo se seguirá realizando*/
 				while (a<101) {
 
 					/*Inicializo mis coordenadas x,y en uno, y la operacion dentro de dicho ciclo se realizará un número de size-1 veces (largo y ancho de la placa)*/
