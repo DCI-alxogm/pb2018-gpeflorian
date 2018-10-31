@@ -1,16 +1,22 @@
+/*Librería que se usará en el programa*/
 #include <stdio.h>
 #include<math.h>
+/*Se usa la librería creada factorial.h*/
 #include "factorial.h"
 
+/*Se crea la función void factorial que se incluirá en la librería factorial.h*/
 
+/*Se declara la función*/
 void factorial() {
 
-	/*Me define una varaible de tipo punto flotante res y x*/
+/*Dentro de los corchetes de la función se definen las acciones que realiza dicha función*/
+
+	/*Me define una varaible de tipo punto flotante res y xi*/
 	float xi=5,res;
 
 				/*Realizara las operaciones corresopndientes a el valor x agregado por el usuario*/			
 				res=exp(xi);
-				/*Los fprintf imprimiran a mi archivo factorial.txt los resultados de las operaciones indicadas a continuacion con rango y el espaciado dado por el usuario*/
+				/*printf imprime a la pantalla los resultados de los cálculos realizados*/
 				printf("El exponencial de %f es %f \n",xi,res);
 				res=log(xi);
 				printf("El logaritmo de %f es %f \n",xi,res);

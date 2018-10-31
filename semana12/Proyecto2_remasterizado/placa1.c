@@ -1,11 +1,14 @@
-/*Este programa declara y contiene las instruccioens con las cuáles se calcularán las temperaturas de una placa en estado estacionario. Creado por Guadalupe Florian el 30 de octubre del 2018*/
+/*Este programa define las acciones que realizará la función void temperatras (). Creado por Guadalupe Florian el 30 de octubre del 2018*/
 
 /*Se inican librerías usadas por el programa*/
 #include<stdio.h>
+/*Se usa la librería creada placa.h, la cuál incluye la función void temperaturas*/
 #include "placa.h"
 
 /*Función maestra del programa*/
 void temperaturas(){
+
+/*Dentro de los corchetes de la función se definen las acciones que realiza dicha función*/
 
 	/*Declaro mis variables para los archvos que contienen las tempraturas y el tamaño de mi placa, así como el de los resutlados*/
 	FILE *info;
