@@ -1,6 +1,6 @@
-holamake: holafunc.c hola_main.c
-	gcc -o hola.o hola_main.c holafunc.c -I ./libs
+factorial: factorialfunc.c funcion_main.c
+	gcc -o funcion.o factorialfunc.c -lm funcion_main.c -I ./libs
 
-clean: 
-	rm hola.o
+clean:
 
+	rm funcion.o
