@@ -1,0 +1,1 @@
+Una librería estándar en el lenguaje C contiene el nombre y características de funciones, así como las definiciioes de algunos datos y macros, los cuales se encuntran en un fichero con extensión ".h" (archivo de cabecera); aunque la implementaciòn de las funciones estàn separadas en un archivo de la ibrerìa. 
