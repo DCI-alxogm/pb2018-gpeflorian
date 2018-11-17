@@ -1,0 +1,1 @@
+Este README es para el programa que calcula la temperatura promedia del universo con base en la temperatura asociada a la radiación de fondo de microondas, es decir, a la radiación residual provemiente de una época muy temprana del Universo.
